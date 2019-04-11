@@ -7,7 +7,10 @@ const buttonOne = document.getElementById('buttonOne');
 
 const inputOne = document.getElementById('inputFieldOne');
 
-const loader = '<span>Loading Cabron...</span>';
+const message = {
+  loading: '<span>Loading Cabron...</span>',
+  errors: '<span>Error Pendejo...</span>',
+};
 
 let loremFlickr = 'https://loremflickr.com/640/480/';
 
@@ -41,7 +44,7 @@ function useXHR() {
 
   xhr.onprogress = () => {
     console.log('ready state:', xhr.readyState);
-    imageContainer.innerHTML = `${loader}`;
+    imageContainer.innerHTML = `${message.loading}`;
   };
 
   xhr.onload = () => {
@@ -52,6 +55,7 @@ function useXHR() {
   };
   xhr.onerror = function() {
     console.log('there was an error making the request: ');
+    imageContainer.innerHTML = `${message.errors}`;
   };
   xhr.send();
   // if (request.status === 200) {
