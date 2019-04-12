@@ -8,6 +8,6 @@ var browserSync = require('browser-sync');
  */
 browserSync({
   server: 'app',
-  files: ['app/*.html', 'app/css/*.css', 'app/index.js'],
+  files: ['app/*.html', 'app/*.css', 'app/index.js'],
   cors: true,
 });

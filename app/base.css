@@ -2,3 +2,30 @@
   font-family: monospace;
   font-size: 16px;
 }
+
+.primary-container {
+  position: relative;
+  margin: 1ex;
+  height: 90vh;
+  }
+  
+img,
+svg {
+  color: hsla(244, 88%, 52%, 0.959);
+  left: 0;
+  height: 100%;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.primary-container__firstImage {
+  position: absolute;
+}
+
+.primary-container__svgOverlay {
+  background-color: hsla(310, 100%, 65%, 0.6);
+  fill: currentColor;
+  filter: opacity(0.67);
+  position: absolute;
+}

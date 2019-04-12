@@ -7,18 +7,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="base.css">
 
-  <title>Document</title>
+  <title>collage make</title>
 </head>
 
 <body>
+  
+  <div class="primary-container">
+      <img src="" alt="this in from..." id="firstImage" class="primary-container__firstImage" src="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" class="primary-container__svgOverlay">
+        <title>fourDots</title>
+        <g>
+          <circle cx="125" cy="125" r="105"/>
+          <circle cx="375" cy="125" r="105"/>
+          <circle cx="125" cy="375" r="105"/>
+          <circle cx="375" cy="375" r="105"/>
+        </g>
+      </svg>
+  </div>
+  <div id="output" class="init"></div>
   <fieldset>
     <legend>Get the images...</legend>
     <label for="inputField">load the image</label>
     <input type="text" name="inputField" id="inputFieldOne" value="" placeholder="enter a word">
     <button type="submit" id="buttonOne">Submit</button>
   </fieldset>
-  <img src="https://loremflickr.com/640/640/glacier" alt="this in from..." id="firstImage">
-  <div id="output"></div>
 </body>
 
 <script src="index.js"></script>
