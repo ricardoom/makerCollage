@@ -17,7 +17,7 @@ const outputContainer = document.getElementById('output');
 
 let dc = 'http://api.repo.nypl.org/api/v1/items/search?q=';
 
-let dcQuery = 'cats';
+let dcQuery = 'mountain';
 
 let dcPublicDomain = '&publicDomainOnly=true';
 
@@ -33,6 +33,7 @@ let loremRando = '?random=1';
 
 function getTheLoremImage() {
   let theInputValue = inputOne.value;
+  debugger
   let newImageURL = `${loremFlickr}${theInputValue}${loremRando}`;
   return newImageURL;
 }
