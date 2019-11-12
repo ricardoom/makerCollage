@@ -1,0 +1,37 @@
+:root {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.primary-container {
+  position: relative;
+  margin: 1ex;
+  height: 90vh;
+}
+
+img,
+svg {
+  color: rgba(39, 25, 240, 0.959);
+  left: 0;
+  height: 100%;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.primary-container__firstImage {
+  position: absolute;
+}
+
+.primary-container__svgOverlay {
+  background-color: rgba(255, 77, 225, 0.6);
+  fill: currentColor;
+  filter: opacity(0.67);
+  position: absolute;
+}
+
+.primary-container__bigWord {
+  color: #ff0000;
+}
+
+/*# sourceMappingURL=base.css.map */

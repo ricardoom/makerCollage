@@ -1,0 +1,23 @@
+{
+  "name": "collageMaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js && sass --watch ./app/base.scss ./app/base.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardoom/makerCollage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardoom/makerCollage/issues"
+  },
+  "homepage": "https://github.com/ricardoom/makerCollage#readme",
+  "dependencies": {
+    "browser-sync": "^2.1.6"
+  }
+}
