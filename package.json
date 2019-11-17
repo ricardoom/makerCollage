@@ -1,10 +1,10 @@
 {
   "name": "collageMaker",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js && sass --watch ./app/base.scss ./app/base.css"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

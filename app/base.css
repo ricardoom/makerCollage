@@ -8,30 +8,24 @@
   margin: 1ex;
   height: 90vh;
 }
-
-img,
-svg {
+.primary-container img {
   color: rgba(39, 25, 240, 0.959);
   left: 0;
   height: 100%;
-  position: relative;
   top: 0;
   width: 100%;
 }
-
 .primary-container__firstImage {
-  position: absolute;
+  -webkit-clip-path: url(#clipping);
+  clip-path: url(#clippingPath);
 }
-
-.primary-container__svgOverlay {
-  background-color: rgba(255, 77, 225, 0.6);
-  fill: currentColor;
-  filter: opacity(0.67);
-  position: absolute;
-}
-
 .primary-container__bigWord {
-  color: #ff0000;
+  color: #00ff4c;
+  clip-path: url(#textClipper);
+}
+
+#textClipper {
+  font: bold 10em/1.5 monospace;
 }
 
 /*# sourceMappingURL=base.css.map */

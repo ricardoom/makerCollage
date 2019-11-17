@@ -1,69 +1,65 @@
 // collage maker
 
 // place images on screen
-const imageContainer = document.getElementById('firstImage');
+const imageContainer = document.getElementById("firstImage");
 
-const buttonOne = document.getElementById('buttonOne');
+const buttonOne = document.getElementById("buttonOne");
 
-const inputOne = document.getElementById('inputFieldOne');
+const inputOne = document.getElementById("inputFieldOne");
 
+// SVG elements
+const bigWordSVG = document.getElementById("textClipper");
+let bigWordWord = document.getElementById("firstWord");
+
+// XHR Messages
 const message = {
-  loading: '<span>Loading Cabron...</span>',
-  errors: '<span>Error Pendejo...</span>',
-  loaded: '<span>Your new image</span',
+  loading: "<span>Loading Cabron...</span>",
+  errors: "<span>Error Pendejo...</span>",
+  loaded: "<span>Your new image</span"
 };
 
-const outputContainer = document.getElementById('output');
+const outputContainer = document.getElementById("output");
 
-let dc = 'http://api.repo.nypl.org/api/v1/items/search?q=';
+const loadingSpinner = "assets/Spinner-Loading.gif";
 
-let dcQuery = 'mountain';
+// Use only images from lorem flickr
+let loremFlickr = "https://loremflickr.com/640/480/";
 
-let dcPublicDomain = '&publicDomainOnly=true';
+let loremWord = "paris";
 
-let loremFlickr = 'https://loremflickr.com/640/480/';
-
-let wikiAPI = '';
-
-let loremWord = 'paris';
-
-let loremRando = '?random=1';
+let loremRando = "?random=1";
 
 // get the word from the input field
-
 function getTheLoremImage() {
   let theInputValue = inputOne.value;
-  debugger
   let newImageURL = `${loremFlickr}${theInputValue}${loremRando}`;
   return newImageURL;
 }
 
-function getTheURL(firstPart, query, secondPart) {
-  let theInputValue = inputOne.value;
-  let theURL = `${firstPart}${query}${secondPart}`;
-  return theURL;
-}
+// function getTheURL(firstPart, query, secondPart) {
+//   let theInputValue = inputOne.value;
+//   let theURL = `${firstPart}${query}${secondPart}`;
+//   return theURL;
+// }
 
-function updateImgURL() {
-  let newURL = getTheLoremImage();
-  console.log('updateIMG url is being fired');
-  if ((imageContainer.src = '')) {
-    imageContainer.src = newURL;
-  }
-}
+// change the big word based on input
+function changeWord() {}
 
 // request images from  lorem flickr
 function useXHR() {
+  console.log("the button was pressed");
   let xhr = new XMLHttpRequest();
+
   console.log(xhr);
 
-  xhr.open('GET', getTheLoremImage());
+  xhr.open("GET", getTheLoremImage());
   //xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 
   xhr.onprogress = () => {
-    console.log('on progress ready state:', xhr.readyState);
+    console.log("On Progress ready state:", xhr.readyState);
     outputContainer.innerHTML = `${message.loading}`;
-    outputContainer.setAttribute('class', 'loading');
+    imageContainer.src = loadingSpinner;
+    outputContainer.setAttribute("class", "loading");
   };
 
   // xhr.onreadystatechange = () => {
@@ -73,20 +69,24 @@ function useXHR() {
   // };
 
   xhr.onload = () => {
-    console.log('Onload Ready State is:', xhr.readyState);
+    console.log(
+      "Onload Ready State is:",
+      xhr.readyState,
+      "On Load xhr responseURL is: ",
+      xhr.responseURL
+    );
     imageContainer.src = xhr.responseURL;
     outputContainer.innerHTML = `${message.loaded}`;
-    outputContainer.setAttribute('class', 'loaded');
+    outputContainer.setAttribute("class", "loaded");
+    bigWordWord.innerHTML = inputOne.value;
   };
 
   xhr.onerror = () => {
-    console.log('there was an error making the request: ');
+    console.log("there was an error making the request: ");
     outputContainer.innerHTML = `${message.errors}`;
   };
 
   xhr.send();
-
-  console.log('button is being pressed');
 }
 
-buttonOne.addEventListener('click', useXHR);
+buttonOne.addEventListener("click", useXHR);

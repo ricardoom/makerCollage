@@ -7,32 +7,37 @@
   position: relative;
   margin: 1ex;
   height: 90vh;
+
+  img {
+    color: hsla(244, 88%, 52%, 0.959);
+    left: 0;
+    height: 100%;
+    //position: relative;
+    top: 0;
+    width: 100%;
   }
-  
-img,
-svg {
-  color: hsla(244, 88%, 52%, 0.959);
-  left: 0;
-  height: 100%;
-  position: relative;
-  top: 0;
-  width: 100%;
-}
 
-.primary-container__firstImage {
-  position: absolute;
-}
+  &__firstImage {
+    // position: absolute;
+    -webkit-clip-path: url(#clipping);
+    clip-path: url(#clippingPath);
+  }
 
-.primary-container__svgOverlay {
-  background-color: hsla(310, 100%, 65%, 0.6);
-  fill: currentColor;
-  filter: opacity(0.67);
-  position: absolute;
-}
-
-.primary-container {
-  
   &__bigWord {
+    // this is an image w/ an svg clip path applied to it
     color: #00ff4c;
+    clip-path: url(#textClipper);
   }
+} // /.primary-container
+
+#textClipper {
+  font: bold 10em/1.5 monospace;
+}
+
+.svgOverlay {
+  // background-color: hsla(310, 100%, 65%, 0.6);
+  // fill: currentColor;
+  // filter: opacity(0.67);
+  // display: none;
+  // position: absolute;
 }
