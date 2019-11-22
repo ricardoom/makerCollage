@@ -12,17 +12,29 @@
   <body>
     <div class="primary-container">
       <img
-        src="https://loremflickr.com/640/480/?random=1"
+        src="https://loremflickr.com/640/640/flower"
         alt="this in from..."
         id="firstImage"
         class="primary-container__firstImage"
       />
       <img
-        src="https://loremflickr.com/640/480/?random=1"
+        src="https://loremflickr.com/640/640/glacier"
         alt="this in from..."
         id="textImage"
         class="primary-container__bigWord"
       />
+      <!-- ideally we'll put dynamic shapes here -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="primary-container__bigShape"
+        width="500"
+        height="433.0127"
+        id="simpleTriangle"
+        viewBox="0 0 250 216.50635"
+      >
+        <title>simpleTriangle</title>
+        <polygon points="125 0 0 216.506 250 216.506 125 0" />
+      </svg>
     </div>
     <div id="output" class="init"></div>
     <fieldset>
@@ -40,13 +52,14 @@
     <svg class="svgOverlay">
       <defs>
         <clipPath id="clippingPath">
-          <circle cx="125" cy="125" r="105" />
+          <circle cx="125" cy="225" r="205" />
           <circle cx="375" cy="125" r="105" />
-          <circle cx="125" cy="375" r="105" />
-          <circle cx="375" cy="375" r="105" />
+          <circle cx="125" cy="375" r="205" />
+          <circle cx="475" cy="575" r="75" />
+          <circle cx="15" cy="305" r="25" />
         </clipPath>
-        <clipPath id="textClipper">
-          <text id="firstWord" x="1.2em" y="1.2em">Text</text>
+        <clipPath id="textClipper" class="textClipper">
+          <text id="firstWord" x="0" y="1.2em">مجلةة</text>
         </clipPath>
       </defs>
     </svg>

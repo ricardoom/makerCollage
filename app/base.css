@@ -3,29 +3,44 @@
   font-size: 16px;
 }
 
-.primary-container {
-  position: relative;
-  margin: 1ex;
-  height: 90vh;
+html {
+  box-sizing: border-box;
 }
-.primary-container img {
-  color: rgba(39, 25, 240, 0.959);
-  left: 0;
-  height: 100%;
-  top: 0;
-  width: 100%;
+
+.primary-container {
+  background-color: rgba(39, 25, 240, 0.59);
+  height: 90vh;
+  margin: 1ex;
+  overflow: hidden;
+  position: relative;
+}
+.primary-container svg {
+  left: 10vw;
+  position: absolute;
+  top: 30vh;
 }
 .primary-container__firstImage {
-  -webkit-clip-path: url(#clipping);
   clip-path: url(#clippingPath);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 .primary-container__bigWord {
   color: #00ff4c;
   clip-path: url(#textClipper);
+  position: absolute;
+  width: 100%;
+}
+.primary-container__bigShape {
+  fill: rgba(204, 0, 255, 0.671);
 }
 
-#textClipper {
-  font: bold 10em/1.5 monospace;
+.textClipper {
+  font: bold 22rem/1.5 sans-serif;
+  position: absolute;
+  top: 3.1rem;
+  left: 3rem;
 }
 
 /*# sourceMappingURL=base.css.map */

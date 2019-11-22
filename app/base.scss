@@ -1,37 +1,57 @@
+// colors
+
 :root {
   font-family: monospace;
   font-size: 16px;
 }
 
-.primary-container {
-  position: relative;
-  margin: 1ex;
-  height: 90vh;
+html {
+  box-sizing: border-box;
+}
 
-  img {
-    color: hsla(244, 88%, 52%, 0.959);
-    left: 0;
-    height: 100%;
-    //position: relative;
-    top: 0;
-    width: 100%;
+.primary-container {
+  background-color: hsla(244, 88%, 52%, 0.59);
+  height: 90vh;
+  margin: 1ex;
+  overflow: hidden;
+  position: relative;
+
+  img {}
+
+  svg {
+    left: 10vw;
+    position: absolute;
+    top: 30vh;
   }
 
   &__firstImage {
-    // position: absolute;
-    -webkit-clip-path: url(#clipping);
     clip-path: url(#clippingPath);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 
   &__bigWord {
     // this is an image w/ an svg clip path applied to it
     color: #00ff4c;
     clip-path: url(#textClipper);
+    position: absolute;
+    width: 100%;
   }
-} // /.primary-container
 
-#textClipper {
-  font: bold 10em/1.5 monospace;
+  &__bigShape {
+    fill: hsla(288, 100%, 50%, 0.671);
+  }
+}
+
+// /.primary-container
+
+.textClipper {
+  font: bold 22rem/1.5 sans-serif;
+  position: absolute;
+  top: 3.1rem;
+  left: 3rem;
 }
 
 .svgOverlay {
