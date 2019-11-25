@@ -1,13 +1,19 @@
 /**
  * Require Browsersync
  */
-var browserSync = require('browser-sync');
+let browserSync = require('browser-sync');
 
 /**
  * Run Browsersync with server config
  */
 browserSync({
   server: 'app',
-  files: ['app/*.html', 'app/*.css', 'app/index.js'],
-  cors: true,
+  files: [
+    'app/*.html',
+    'app/*.css',
+    'app/*.js',
+    'app/modules/*.js',
+    'app/assets/*.*'
+  ],
+  cors: true
 });

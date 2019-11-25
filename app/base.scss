@@ -1,38 +1,63 @@
+// colors
+
 :root {
   font-family: monospace;
   font-size: 16px;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 .primary-container {
-  position: relative;
-  margin: 1ex;
+  background-color: hsla(244, 88%, 52%, 0.59);
   height: 90vh;
-  }
-  
-img,
-svg {
-  color: hsla(244, 88%, 52%, 0.959);
-  left: 0;
-  height: 100%;
+  margin: 1ex;
+  overflow: hidden;
   position: relative;
-  top: 0;
-  width: 100%;
-}
 
-.primary-container__firstImage {
-  position: absolute;
-}
+  img {}
 
-.primary-container__svgOverlay {
-  background-color: hsla(310, 100%, 65%, 0.6);
-  fill: currentColor;
-  filter: opacity(0.67);
-  position: absolute;
-}
-
-.primary-container {
-  
-  &__bigWord {
-    color: #00ff4c;
+  svg {
+    left: 10vw;
+    position: absolute;
+    top: 30vh;
   }
+
+  &__firstImage {
+    clip-path: url(#clippingPath);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__bigWord {
+    // this is an image w/ an svg clip path applied to it
+    color: #00ff4c;
+    clip-path: url(#textClipper);
+    position: absolute;
+    width: 100%;
+  }
+
+  &__bigShape {
+    fill: hsla(288, 100%, 50%, 0.671);
+  }
+}
+
+// /.primary-container
+
+.textClipper {
+  font: bold 22rem/1.5 sans-serif;
+  position: absolute;
+  top: 3.1rem;
+  left: 3rem;
+}
+
+.svgOverlay {
+  // background-color: hsla(310, 100%, 65%, 0.6);
+  // fill: currentColor;
+  // filter: opacity(0.67);
+  // display: none;
+  // position: absolute;
 }
