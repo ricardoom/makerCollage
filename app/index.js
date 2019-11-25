@@ -1,7 +1,8 @@
+import dynamicCircles from './modules/dynamicCircles.js';
 // collage maker
 
 // place images on screen
-const primaryContainer = document.querySelector('.primary-container');
+// export const primaryContainer = document.querySelector('.primary-container');
 
 const imageContainer = document.getElementById('firstImage');
 
@@ -14,10 +15,10 @@ const inputOne = document.getElementById('inputFieldOne');
 // SVG elements
 const bigWordSVG = document.getElementById('textClipper');
 
-let bigWordWord = document.getElementById('firstWord');
+const bigWordWord = document.getElementById('firstWord');
 
-// const circles = document.getElementsByTagName('circle');
-const circles = document.querySelectorAll('circle');
+// export const circles = document.querySelectorAll('circle');
+
 // XHR Messages
 const message = {
   loading: '<span>Loading Cabron...</span>',
@@ -33,24 +34,6 @@ const loadingSpinner = 'assets/Spinner-Loading.gif';
 // Dynamic SVG manipulations:
 //
 // move the circles around dynamically, on refresh / or on button press
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
-function dynamicCircles() {
-  console.log('dynamicCircles getting called');
-
-  const x = primaryContainer.offsetWidth;
-
-  const y = primaryContainer.offsetHeight;
-
-  const r = 150;
-
-  circles.forEach(circ => circ.setAttribute('cx', getRandomInt(x)));
-  circles.forEach(circ => circ.setAttribute('cy', getRandomInt(y)));
-  circles.forEach(circ => circ.setAttribute('r', getRandomInt(r)));
-}
 
 //
 // Use only images from lorem flickr
@@ -116,4 +99,9 @@ function useXHR() {
 }
 
 // Do the things:
+document.addEventListener('DOMContentLoaded', event => {
+  console.log('DOM fully loaded and parsed');
+  dynamicCircles();
+});
+
 buttonOne.addEventListener('click', useXHR);
