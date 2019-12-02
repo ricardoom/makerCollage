@@ -1,10 +1,11 @@
 import getRandomInt from './getRandomInt.js';
 
 export default function dynamicCircles() {
-  const primaryContainer = document.querySelector('.primary-container');
-  const circles = document.querySelectorAll('circle');
-
   console.log('dynamicCircles getting called');
+
+  const primaryContainer = document.querySelector('.primary-container');
+
+  const circles = document.querySelectorAll('circle');
 
   const x = primaryContainer.offsetWidth;
 
