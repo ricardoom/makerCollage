@@ -20,7 +20,6 @@ export function basicXHR(containersObject) {
   console.log('calling basic XHR function when the button is pressed');
 
   containersObject.forEach(container => {
-
     const xhr = new XMLHttpRequest();
 
     // console.log(xhr);
