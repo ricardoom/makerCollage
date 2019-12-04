@@ -2,17 +2,15 @@ import { getTheLoremImage, inputOne } from './loremImage.js';
 
 import { bigWordWord } from './../index.js';
 
-// const loremImage = getTheLoremImage();
-
 const outputContainer = document.getElementById('output');
 
 const loadingSpinner = 'assets/Spinner-Loading.gif';
 
 // XHR Messages
 const xhrMessages = {
-  loading: '<span>Loading Cabron...</span>',
+  loading: '<span>Loading Carbon...</span>',
   errors: '<span>Error Pendejo...</span>',
-  loaded: '<span>Your new image</span'
+  loaded: '<span>Your new image</span',
 };
 
 export function basicXHR(containersObject) {
@@ -38,7 +36,7 @@ export function basicXHR(containersObject) {
         'Onload Ready State is:',
         xhr.readyState,
         'On Load xhr responseURL is: ',
-        xhr.responseURL
+        xhr.responseURL,
       );
 
       bigWordWord.innerHTML = inputOne.value;
