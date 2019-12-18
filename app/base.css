@@ -8,11 +8,12 @@ html {
 }
 
 .primary-container {
-  background-color: rgba(39, 25, 240, 0.59);
+  background-color: #19c5f0;
   height: 90vh;
   margin: 1ex;
-  overflow: scroll;
+  overflow: hidden;
   position: relative;
+  top: 0;
 }
 .primary-container__firstImage {
   clip-path: url("#clippingPath");
@@ -37,10 +38,7 @@ html {
   top: 30vh;
 }
 .primary-container__coverCircles {
-  color: rgba(204, 0, 255, 0.671);
-  fill: currentColor;
   height: 100%;
-  opacity: 0.5;
   width: 100%;
 }
 
@@ -54,6 +52,11 @@ html {
 .svg-test {
   height: 500px;
   width: 100%;
+}
+
+.svgOverlay {
+  position: absolute;
+  top: 0;
 }
 
 /*# sourceMappingURL=base.css.map */

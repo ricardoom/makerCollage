@@ -11,10 +11,18 @@
 
   <body>
     <div class="primary-container">
-      <svg xmlns="http://www.w3.org/2000/svg" id="coverCircles" viewBox="0 0 500 500" class="primary-container__coverCircles">
+      <svg  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="svgOverlay" viewBox="0 0 1000 1000">
+        <defs>
+          <clipPath id="clippingPath">
+            <circle r="50" cx="120"cy="34"></circle>
+            <circle r="150" cx="320" cy="134"></circle>
+          </clipPath>
+          <clipPath id="textClipper" class="text-clipper">
+            <text id="firstWord" x="0" y="1.6em">مجلةة</text>
+          </clipPath>
+        </defs>
       </svg>
-      <svg>
-       
+      <svg xmlns="http://www.w3.org/2000/svg" id="coverCircles" viewBox="0 0 500 500" class="primary-container__coverCircles">
       </svg>
       <img
         async="true"
@@ -56,27 +64,6 @@
       />
       <button type="submit" id="buttonOne">Submit</button>
     </fieldset>
-
-    <svg class="svgOverlay" viewBox="0 0 1000 1000">
-      <g id="circleContainer">
-        <circle r="142" cx="407" cy="157"></circle>
-        <circle r="60" cx="281" cy="83"></circle>
-        <circle cx="605" cy="359" r="107"></circle>
-        <circle cx="84" cy="112" r="12"></circle>
-        <circle cx="150" cy="509" r="87"></circle>
-        <circle cx="271" cy="136" r="111"></circle>
-        <circle cx="42" cy="44" r="62"></circle>
-      </g>
-      <defs>
-        <clipPath id="clippingPath">
-          <circle r="50" cx="120"cy="34"></circle>
-          <circle r="150" cx="320" cy="134"></circle>
-        </clipPath>
-        <clipPath id="textClipper" class="text-clipper">
-          <text id="firstWord" x="0" y="1.6em">مجلةة</text>
-        </clipPath>
-      </defs>
-    </svg>
   </body>
 
   <script type="module" src="index.js"></script>

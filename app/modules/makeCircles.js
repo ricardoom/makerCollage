@@ -16,7 +16,10 @@ const makeCircles = function(numberOfCircles, container) {
     newCircle.setAttribute('cx', getRandomInt(x));
     newCircle.setAttribute('cy', getRandomInt(y));
     newCircle.setAttribute('r', getRandomInt(r));
-    newCircle.style.color = `hsla(${getRandomInt(360)},${getRandomInt(100)}%, ${getRandomInt(100)}%, ${getRandom(1)})`;
+    newCircle.style.fill = `hsla(${getRandomInt(360)},${getRandomInt(100)}%, ${getRandomInt(100)}%, ${getRandom(
+      1,
+      0.25,
+    )})`;
     container.appendChild(newCircle);
   }
 };

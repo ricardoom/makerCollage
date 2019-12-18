@@ -5,8 +5,8 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-function getRandom(num) {
-  return Math.random(num);
+function getRandom(max, min) {
+  return Math.random() * (max - min) + min;
 }
 
 export { getRandomInt, getRandom };
