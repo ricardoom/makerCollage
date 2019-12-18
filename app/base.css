@@ -8,39 +8,54 @@ html {
 }
 
 .primary-container {
-  background-color: rgba(39, 25, 240, 0.59);
+  background-color: #19c5f0;
   height: 90vh;
   margin: 1ex;
   overflow: hidden;
   position: relative;
+  top: 0;
 }
-.primary-container svg {
+.primary-container .svgOverlay {
+  position: absolute;
+  top: 0;
+}
+.primary-container__firstImage {
+  clip-path: url("#clippingPath");
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.primary-container__bigWord {
+  clip-path: url("#textClipper");
+  color: #00ff4d;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.primary-container__bigShape {
+  color: rgba(204, 0, 255, 0.671);
+  fill: currentColor;
   left: 10vw;
   position: absolute;
   top: 30vh;
 }
-.primary-container__firstImage {
-  clip-path: url(#clippingPath);
+.primary-container__coverCircles {
   height: 100%;
-  left: 0;
-  position: absolute;
   width: 100%;
-}
-.primary-container__bigWord {
-  color: #00ff4c;
-  clip-path: url(#textClipper);
-  position: absolute;
-  width: 100%;
-}
-.primary-container__bigShape {
-  fill: rgba(204, 0, 255, 0.671);
 }
 
-.textClipper {
+.text-clipper {
   font: bold 22rem/1.5 sans-serif;
+  left: 3rem;
   position: absolute;
   top: 3.1rem;
-  left: 3rem;
+}
+
+.svg-test {
+  height: 500px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=base.css.map */

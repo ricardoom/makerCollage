@@ -11,6 +11,19 @@
 
   <body>
     <div class="primary-container">
+      <svg  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" class="svgOverlay" viewBox="0 0 1000 1000" clipPathUnits="objectBoundingBox">
+        <defs>
+          <clipPath id="clippingPath">
+            <circle r="50" cx="120"cy="34"></circle>
+            <circle r="150" cx="320" cy="134"></circle>
+          </clipPath>
+          <clipPath id="textClipper" class="text-clipper">
+            <text id="firstWord" x="0" y="1.6em">مجلةة</text>
+          </clipPath>
+        </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" id="coverCircles" viewBox="0 0 500 500" class="primary-container__coverCircles">
+      </svg>
       <img
         async="true"
         src="https://loremflickr.com/640/640/flower"
@@ -51,20 +64,6 @@
       />
       <button type="submit" id="buttonOne">Submit</button>
     </fieldset>
-    <svg class="svgOverlay">
-      <defs>
-        <clipPath id="clippingPath">
-          <circle cx="125" cy="225" r="205" />
-          <circle cx="375" cy="125" r="105" />
-          <circle cx="125" cy="375" r="205" />
-          <circle cx="475" cy="575" r="75" />
-          <circle cx="15" cy="305" r="25" />
-        </clipPath>
-        <clipPath id="textClipper" class="textClipper">
-          <text id="firstWord" x="0" y="1.2em">مجلةة</text>
-        </clipPath>
-      </defs>
-    </svg>
   </body>
 
   <script type="module" src="index.js"></script>
