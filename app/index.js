@@ -2,12 +2,13 @@
 // collage maker
 //
 
-import dynamicCircles from './modules/dynamicCircles.js';
+// import dynamicCircles from './modules/dynamicCircles.js';
 
-import { makeCircles, removeCircles, clipPathContainer } from './modules/makeCircles.js';
+import { makeCircles, removeCircles } from './modules/makeCircles.js';
 
 import { basicXHR } from './modules/basicXHR.js';
-import getRandomInt from './modules/getRandomInt.js';
+
+import { getRandomInt } from './modules/getRandomInt.js';
 
 // place images on screen
 
@@ -26,9 +27,9 @@ export const primaryContainer = document.querySelector('.primary-container');
 
 export const circles = document.querySelectorAll('circle');
 
-export const x = primaryContainer.offsetWidth;
+export const x = primaryContainer.clientWidth;
 
-export const y = primaryContainer.offsetHeight;
+export const y = primaryContainer.clientHeight;
 
 export const r = 150;
 

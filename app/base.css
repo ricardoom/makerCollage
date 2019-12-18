@@ -15,44 +15,45 @@ html {
   position: relative;
 }
 .primary-container__firstImage {
-  clip-path: url(#clippingPath);
+  clip-path: url("#clippingPath");
   height: 100%;
   left: 0;
   position: absolute;
-  width: 100%;
   top: 50%;
+  width: 100%;
 }
 .primary-container__bigWord {
-  clip-path: url(#textClipper);
+  clip-path: url("#textClipper");
   color: #00ff4d;
   position: absolute;
-  width: 100%;
   top: 0;
+  width: 100%;
 }
 .primary-container__bigShape {
-  fill: rgba(204, 0, 255, 0.671);
+  color: rgba(204, 0, 255, 0.671);
+  fill: currentColor;
   left: 10vw;
   position: absolute;
   top: 30vh;
 }
 .primary-container__coverCircles {
-  color: #ff148a;
+  color: rgba(204, 0, 255, 0.671);
   fill: currentColor;
+  height: 100%;
   opacity: 0.5;
   width: 100%;
-  height: 100%;
 }
 
 .text-clipper {
   font: bold 22rem/1.5 sans-serif;
+  left: 3rem;
   position: absolute;
   top: 3.1rem;
-  left: 3rem;
 }
 
 .svg-test {
-  width: 100%;
   height: 500px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=base.css.map */

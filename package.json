@@ -1,7 +1,7 @@
 {
-  "name": "collageMaker",
-  "version": "0.0.1",
-  "description": "",
+  "name": "collage-maker",
+  "version": "0.0.2",
+  "description": "a javascript based collage maker",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"

@@ -1,20 +1,22 @@
-import getRandomInt from './getRandomInt.js';
+import { getRandomInt, getRandom } from './getRandomInt.js';
 import { x, y, r } from './../index.js';
 
 const clipPathContainer = document.getElementById('clippingPath');
 const testCont = document.getElementById('circleContainer');
 
 const removeCircles = function(container) {
-  container.childNodes.forEach(node => node.remove(node));
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
 };
 
 const makeCircles = function(numberOfCircles, container) {
   for (let i = 0; i < numberOfCircles; i++) {
-    const newCircle = document.createElement('circle');
+    const newCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     newCircle.setAttribute('cx', getRandomInt(x));
     newCircle.setAttribute('cy', getRandomInt(y));
     newCircle.setAttribute('r', getRandomInt(r));
-    newCircle.style.color = `hsl(${getRandomInt(360)},${getRandomInt(100)}%, ${getRandomInt(100)}%`;
+    newCircle.style.color = `hsla(${getRandomInt(360)},${getRandomInt(100)}%, ${getRandomInt(100)}%, ${getRandom(1)})`;
     container.appendChild(newCircle);
   }
 };
