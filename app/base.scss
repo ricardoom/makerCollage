@@ -22,6 +22,15 @@ html {
   position: relative;
   top: 0;
 
+  .svgOverlay {
+    // background-color: hsla(310, 100%, 65%, 0.6);
+    // fill: currentColor;
+    // filter: opacity(0.67);
+    // display: none;
+    position: absolute;
+    top: 0;
+  }
+
   &__firstImage {
     clip-path: url('#clippingPath');
     height: 100%;
@@ -69,13 +78,4 @@ html {
 .svg-test {
   height: 500px;
   width: 100%;
-}
-
-.svgOverlay {
-  // background-color: hsla(310, 100%, 65%, 0.6);
-  // fill: currentColor;
-  // filter: opacity(0.67);
-  // display: none;
-  position: absolute;
-  top: 0;
 }

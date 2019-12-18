@@ -55,3 +55,4 @@ document.addEventListener(
 );
 
 buttonOne.addEventListener('click', newImages);
+console.log(clipPaths);
