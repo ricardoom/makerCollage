@@ -24,7 +24,6 @@ html {
   height: 100%;
   left: 0;
   position: absolute;
-  top: 50%;
   width: 100%;
 }
 .primary-container__bigWord {
@@ -48,7 +47,6 @@ html {
 
 .text-clipper {
   font: bold 22rem/1.5 sans-serif;
-  left: 3rem;
   position: absolute;
   top: 3.1rem;
 }

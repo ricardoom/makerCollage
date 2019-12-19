@@ -8,7 +8,7 @@ import { makeCircles, removeCircles } from './modules/makeCircles.js';
 
 import { basicXHR } from './modules/basicXHR.js';
 
-import { getRandomInt, getRandom } from './modules/getRandomInt.js';
+import { getRandomInt } from './modules/getRandomInt.js';
 
 export const primaryContainer = document.querySelector('.primary-container');
 
@@ -25,7 +25,7 @@ const buttonOne = document.getElementById('buttonOne');
 
 // const bigWordSVG = document.getElementById('textClipper');
 
-export const clipPaths = document.getElementById('clipPath');
+
 
 export const circles = document.querySelectorAll('circle');
 
@@ -37,7 +37,13 @@ export const r = 150;
 
 export const bigWordWord = document.getElementById('firstWord');
 
+// this is the generated circle container:
+
 export const container = document.getElementById('coverCircles');
+
+// this is the clip path with the circles:
+
+export const clipPaths = document.getElementById('clippingPath');
 
 // load new images from and redraw the circles.
 function newImages() {
