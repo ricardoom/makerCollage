@@ -42,7 +42,9 @@ html {
 }
 .primary-container__coverCircles {
   height: 100%;
+  position: absolute;
   width: 100%;
+  z-index: 2;
 }
 
 .text-clipper {

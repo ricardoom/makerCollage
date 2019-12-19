@@ -25,8 +25,6 @@ const buttonOne = document.getElementById('buttonOne');
 
 // const bigWordSVG = document.getElementById('textClipper');
 
-
-
 export const circles = document.querySelectorAll('circle');
 
 export const x = primaryContainer.clientWidth;
@@ -48,8 +46,9 @@ export const clipPaths = document.getElementById('clippingPath');
 // load new images from and redraw the circles.
 function newImages() {
   removeCircles(container);
-  // makeCircles(getRandomInt(25), clipPaths);
-  makeCircles(getRandomInt(25), container);
+  removeCircles(clipPaths);
+  makeCircles(getRandomInt(8), clipPaths);
+  makeCircles(getRandomInt(8), container);
   basicXHR(containers);
 }
 
@@ -61,4 +60,3 @@ document.addEventListener(
 );
 
 buttonOne.addEventListener('click', newImages);
-console.log(clipPaths);
