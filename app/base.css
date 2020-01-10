@@ -36,9 +36,7 @@ html {
 .primary-container__bigShape {
   color: rgba(204, 0, 255, 0.671);
   fill: currentColor;
-  left: 10vw;
   position: absolute;
-  top: 30vh;
 }
 .primary-container__coverCircles {
   height: 100%;

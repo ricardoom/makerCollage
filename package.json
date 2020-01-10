@@ -4,13 +4,18 @@
   "description": "a javascript based collage maker",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "npm run start & sass --watch app/base.scss app/base.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ricardoom/makerCollage.git"
   },
-  "keywords": [],
+  "keywords": [
+    "svg",
+    "svg masking",
+    "xmlHttpRequest"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
