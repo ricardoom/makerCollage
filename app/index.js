@@ -56,7 +56,7 @@ function newImages() {
   removeCircles(container);
   removeCircles(clipPaths);
   removeTriangles(triangleContainer);
-  makeTriangles(getRandomInt(12), triangleContainer);
+  makeTriangles(getRandomInt(5), triangleContainer);
   makeCircles(getRandomInt(8), clipPaths);
   makeCircles(getRandomInt(8), container);
   basicXHR(containers);
@@ -67,6 +67,7 @@ function newImages() {
 document.addEventListener(
   'DOMContentLoaded',
   makeCircles(getRandomInt(15), container),
+  makeTriangles(getRandomInt(5), triangleContainer),
 );
 
 buttonOne.addEventListener('click', newImages);

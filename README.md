@@ -32,6 +32,7 @@
 - Added a proper README.md
 - update to package.json: running `npm start` sets up browser sync and starts sass watching as well...
 - added in functionality to generate shapes (mostly triangles using `polygon`)
+- figured out how to make my xhr function generic and therefore be able to get more than one image at time.
 
 ### v0.0.0
 
