@@ -4,19 +4,13 @@
 
 // import dynamicCircles from './modules/dynamicCircles.js';
 
-import {
-  makeCircles,
-  removeCircles,
-  removeCircles as removeTriangles,
-} from './modules/makeCircles.js';
+import { makeCircles } from './modules/makeCircles.js';
 
 import { basicXHR } from './modules/basicXHR.js';
 
-import { getRandomInt } from './modules/getRandomInt.js';
+import { getRandomInt, removeShapes } from './modules/utils.js';
 
 import { makeTriangles } from './modules/makeShapes.js';
-
-export const primaryContainer = document.querySelector('.primary-container');
 
 // query images and shapes  on screen
 
@@ -25,6 +19,7 @@ export const imageContainer = document.getElementById('firstImage');
 export const textImageContainer = document.getElementById('textImage');
 
 export const bigWordWord = document.getElementById('firstWord');
+console.log(bigWordWord);
 
 export const triangleContainer = document.getElementById('simpleTriangle');
 
@@ -36,6 +31,8 @@ const buttonOne = document.getElementById('buttonOne');
 // const bigWordSVG = document.getElementById('textClipper');
 
 export const circles = document.querySelectorAll('circle');
+
+export const primaryContainer = document.querySelector('.primary-container');
 
 export const x = primaryContainer.clientWidth;
 
@@ -53,9 +50,9 @@ export const clipPaths = document.getElementById('clippingPath');
 
 // load new images from and redraw the circles.
 function newImages() {
-  removeCircles(container);
-  removeCircles(clipPaths);
-  removeTriangles(triangleContainer);
+  removeShapes(container);
+  removeShapes(clipPaths);
+  removeShapes(triangleContainer);
   makeTriangles(getRandomInt(5), triangleContainer);
   makeCircles(getRandomInt(8), clipPaths);
   makeCircles(getRandomInt(8), container);
@@ -67,7 +64,7 @@ function newImages() {
 document.addEventListener(
   'DOMContentLoaded',
   makeCircles(getRandomInt(15), container),
-  makeTriangles(getRandomInt(5), triangleContainer),
+  makeTriangles(getRandomInt(15), triangleContainer),
 );
 
 buttonOne.addEventListener('click', newImages);

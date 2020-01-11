@@ -27,4 +27,14 @@ function getRandom(max, min) {
   return Math.random() * (max - min) + min;
 }
 
-export { getRandomInt, getRandom, setViewBox };
+//
+// Remove any SVG Shape from the parent container
+//
+
+const removeShapes = function(container) {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+};
+
+export { getRandomInt, getRandom, setViewBox, removeShapes };

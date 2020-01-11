@@ -2,13 +2,13 @@ import { getRandomInt, getRandom, setViewBox } from './utils.js';
 import { x, y, r } from './../index.js';
 
 const clipPathContainer = document.getElementById('clippingPath');
-const testCont = document.getElementById('circleContainer');
+const circleContainer = document.getElementById('circleContainer');
 
-const removeCircles = function(container) {
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
-};
+// const removeCircles = function(container) {
+//   while (container.firstChild) {
+//     container.removeChild(container.firstChild);
+//   }
+// };
 
 const makeCircles = function(numberOfCircles, container) {
   setViewBox(container);
@@ -27,4 +27,4 @@ const makeCircles = function(numberOfCircles, container) {
   }
 };
 
-export { clipPathContainer, makeCircles, removeCircles, testCont };
+export { clipPathContainer, makeCircles, circleContainer };

@@ -21,7 +21,7 @@ const loadingSpinner = 'assets/Spinner-Loading.gif';
 const xhrMessages = {
   loading: '<span>Loading Carbon...</span>',
   errors: '<span>Error Pendejo...</span>',
-  loaded: '<span>Your new image</span'
+  loaded: '<span>Your new image</span',
 };
 
 function basicXHR(containersObject) {
@@ -42,12 +42,12 @@ function basicXHR(containersObject) {
     };
 
     xhr.onload = () => {
-      console.log(
-        'Onload Ready State is:',
-        xhr.readyState,
-        'On Load xhr responseURL is: ',
-        xhr.responseURL
-      );
+      // console.log(
+      //   'Onload Ready State is:',
+      //   xhr.readyState,
+      //   'On Load xhr responseURL is: ',
+      //   xhr.responseURL
+      // );
 
       bigWordWord.innerHTML = inputOne.value;
       container.src = xhr.responseURL;
