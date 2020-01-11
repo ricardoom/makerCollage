@@ -2,7 +2,7 @@
 
 ## A Javascript learning project.
 
-## v0.0.1
+## v0.0.2
 
 ## Goals for this project:
 
@@ -26,6 +26,13 @@
 5. Then `npm run dev`
 
 ## Change Log:
+
+### v0.0.2
+
+- Removed redundant code
+- added a `utlils.js` file for functions that are widely used or do repetitive tasks
+- fixing up files for better readability and removing commented out code
+- left some commented console log, b/c I'm still a little unclear about functionality, so I might want to return them later
 
 ### v0.0.1
 

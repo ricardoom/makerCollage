@@ -4,12 +4,6 @@ import { x, y, r } from './../index.js';
 const clipPathContainer = document.getElementById('clippingPath');
 const circleContainer = document.getElementById('circleContainer');
 
-// const removeCircles = function(container) {
-//   while (container.firstChild) {
-//     container.removeChild(container.firstChild);
-//   }
-// };
-
 const makeCircles = function(numberOfCircles, container) {
   setViewBox(container);
   for (let i = 0; i < numberOfCircles; i++) {

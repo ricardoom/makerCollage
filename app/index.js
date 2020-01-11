@@ -19,7 +19,6 @@ export const imageContainer = document.getElementById('firstImage');
 export const textImageContainer = document.getElementById('textImage');
 
 export const bigWordWord = document.getElementById('firstWord');
-console.log(bigWordWord);
 
 export const triangleContainer = document.getElementById('simpleTriangle');
 
