@@ -1,9 +1,17 @@
-// make shapes or make triangles
-import { getRandomInt, getRandom } from './getRandomInt.js';
+//
+// Make shapes or make triangles
+//
 
-// import { triangleContainer } from '../index.js';
+//
+// Import functions and variables:
+//
+
+import { getRandomInt, getRandom, setViewBox } from './utils.js';
 
 import { x, y, r } from './../index.js';
+
+//
+// DOM elements
 //
 
 const triangle = document.getElementById('simpleTriangle');
@@ -12,12 +20,10 @@ const polygon = triangle.querySelector('polygon');
 
 const polygonPoints = polygon.getAttributeNames();
 
-const setViewBox = function(container) {
-  container.setAttribute('viewBox', `0 0 ${x} ${y}`);
-  container.setAttribute('height', `${y}`);
-  container.setAttribute('width', `${x}`);
-};
-// make a given number of triangles:
+//
+// Make a given number of triangles:
+//
+
 const makeTriangles = (numberOfTriangles, container) => {
   setViewBox(triangle);
   for (let i = 0; i < numberOfTriangles; i++) {
@@ -39,7 +45,7 @@ const makeTriangles = (numberOfTriangles, container) => {
     newTriangle.setAttribute('points', pointsArray);
     newTriangle.style.fill = `hsla(${getRandomInt(360)},${getRandomInt(
       100,
-    )}%, ${getRandomInt(100)}%, ${getRandom(1, 0.25)})`;
+    )}%, ${getRandomInt(100)}%, ${getRandom(0.8, 0.05)})`;
     container.appendChild(newTriangle);
   }
 };
@@ -55,4 +61,4 @@ const theNewArray = () => {
   }
 };
 
-export { makeTriangles, theNewArray, setViewBox };
+export { makeTriangles, theNewArray };

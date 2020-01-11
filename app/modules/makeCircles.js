@@ -1,6 +1,5 @@
-import { getRandomInt, getRandom } from './getRandomInt.js';
+import { getRandomInt, getRandom, setViewBox } from './utils.js';
 import { x, y, r } from './../index.js';
-import { setViewBox } from './makeShapes.js';
 
 const clipPathContainer = document.getElementById('clippingPath');
 const testCont = document.getElementById('circleContainer');
