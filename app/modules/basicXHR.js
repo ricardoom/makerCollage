@@ -4,7 +4,7 @@
 
 import { getTheLoremImage, inputOne } from './loremImage.js';
 
-import { bigWordWord } from './../index.js';
+import { bigWordWord } from './textShapes.js';
 
 //
 // DOM Elements

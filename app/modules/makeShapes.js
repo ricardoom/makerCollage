@@ -27,25 +27,20 @@ const polygonPoints = polygon.getAttributeNames();
 const makeTriangles = (numberOfTriangles, container) => {
   setViewBox(triangle);
   for (let i = 0; i < numberOfTriangles; i++) {
-    const newTriangle = document.createElementNS(
-      'http://www.w3.org/2000/svg',
-      'polygon',
-    );
+    const newTriangle = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     // temp array of points
     const pointsArray = [
-      getRandomInt(y),
+      getRandomInt(x * 0.7),
+      getRandomInt(y * 0.7),
       getRandomInt(x),
-      getRandomInt(y),
       getRandomInt(x / y),
-      getRandomInt(r),
+      getRandomInt(r / x),
       getRandomInt(y / x),
-      getRandomInt(x / 1.3),
+      getRandomInt(x),
       getRandomInt(y + r * 0.2),
     ];
     newTriangle.setAttribute('points', pointsArray);
-    newTriangle.style.fill = `hsla(${getRandomInt(360)},${getRandomInt(
-      100,
-    )}%, ${getRandomInt(100)}%, ${getRandom(0.8, 0.05)})`;
+    newTriangle.style.fill = `hsla(${getRandomInt(360)},${getRandomInt(100)}%, ${getRandomInt(100)}%, ${getRandom(0.8, 0.05)})`;
     container.appendChild(newTriangle);
   }
 };
