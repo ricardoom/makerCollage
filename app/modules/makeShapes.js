@@ -33,9 +33,9 @@ const makeTriangles = (numberOfTriangles, container) => {
       getRandomInt(x * 0.7),
       getRandomInt(y * 0.7),
       getRandomInt(x),
-      getRandomInt(x / y),
-      getRandomInt(r / x),
-      getRandomInt(y / x),
+      getRandomInt(x),
+      getRandomInt(r),
+      getRandomInt(y),
       getRandomInt(x),
       getRandomInt(y + r * 0.2),
     ];

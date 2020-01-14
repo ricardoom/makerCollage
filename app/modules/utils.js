@@ -1,5 +1,5 @@
 //
-// Utilites used pretty frequently:
+// Utilities used pretty frequently:
 //
 //
 // Imports:
