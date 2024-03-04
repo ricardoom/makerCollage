@@ -7,6 +7,7 @@ let browserSync = require('browser-sync');
  */
 browserSync({
   server: 'app',
+  port: 56789,
   files: [
     'app/*.html',
     'app/*.css',

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "npm run start & sass --watch app/base.scss app/base.css"
+    "dev": "pnpm run start & sass --watch app/base.scss app/base.css"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,12 @@
   },
   "homepage": "https://github.com/ricardoom/makerCollage#readme",
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.23.0"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",

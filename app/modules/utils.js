@@ -71,7 +71,7 @@ function randomBGColor() {
 function setNewBG() {
   const newBGColor = randomBGColor();
   bgStyleRule.style.setProperty('background-color', newBGColor);
-  console.log('new bg being called...', newBGColor);
+  // console.log('new bg being called...', newBGColor);
 }
 
 export { getRandomInt, getRandom, setViewBox, removeShapes, effectFilter, setNewBG };

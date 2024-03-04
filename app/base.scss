@@ -69,9 +69,30 @@ html {
 // /.primary-container
 
 .text-clipper {
-  font: bold 22rem/1.5 sans-serif;
+  --font-size: 32rem;
+  --lh: 1.55;
+  --fw: 600;
+  --rotate: 0deg;
+  --translate-x: 0;
+  --translate-y: 0;
+  --translate-z: 0;
+  // font: bold 22rem/1.5 sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--lh);
+  font-weight: var(--fw);
   position: absolute;
-  top: 3.1rem;
+
+  .first-word {
+  rotate: var(--rotate, 0deg);
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: perspective(600px)
+  rotate(var(--rotate, 0deg) 
+  transformX(var(--translate-x))
+  transformY(var(--translate-y))
+  transformZ(var(--translate-z)));
+  // translate: var(--translate-x) var(--translate-y), var(--translate-z);
+  }
 }
 
 .svg-test {

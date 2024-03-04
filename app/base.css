@@ -8,7 +8,7 @@ html {
 }
 
 .primary-container {
-  background-color: #19c5f0;
+  background-color: hsl(192, 88%, 52%);
   height: 90vh;
   margin: 1ex;
   overflow: hidden;
@@ -28,13 +28,13 @@ html {
 }
 .primary-container__bigWord {
   clip-path: url("#textClipper");
-  color: #00ff4d;
+  color: hsl(138, 100%, 50%);
   position: absolute;
   top: 0;
   width: 100%;
 }
 .primary-container__bigShape {
-  color: rgba(204, 0, 255, 0.671);
+  color: hsla(288, 100%, 50%, 0.671);
   fill: currentColor;
   position: absolute;
 }
@@ -46,9 +46,23 @@ html {
 }
 
 .text-clipper {
-  font: bold 22rem/1.5 sans-serif;
+  --font-size: 32rem;
+  --lh: 1.55;
+  --fw: 600;
+  --rotate: 0deg;
+  --translate-x: 0;
+  --translate-y: 0;
+  --translate-z: 0;
+  font-size: var(--font-size);
+  line-height: var(--lh);
+  font-weight: var(--fw);
   position: absolute;
-  top: 3.1rem;
+}
+.text-clipper .first-word {
+  rotate: var(--rotate, 0deg);
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: perspective(600px) rotate(var(--rotate, 0deg) transformX(var(--translate-x)) transformY(var(--translate-y)) transformZ(var(--translate-z)));
 }
 
 .svg-test {

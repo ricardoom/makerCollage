@@ -2,8 +2,20 @@
 // Fun with the text shapes.
 //
 
+// import { getRandomInt } from './utils.js';
+
 const bigWordWord = document.getElementById('firstWord');
 
+const transformWord = (w, r, x, y, z, fs) => {
+  w.style.setProperty('--rotate', `${r}deg`);
+  w.style.setProperty('--translate-x', `${x}px`);
+  w.style.setProperty('--translate-y', `${y}px`);
+  w.style.setProperty('--translate-z', `${z}px`);
+  w.style.setProperty('--font-size', `${fs}rem`);
+  console.log(w, r, x, y, z);
+}
+
+// firstWord.style.setProperty('--rotate', '0');
 //
 // This function moves the original word around
 function shapeTheText() {
@@ -21,4 +33,4 @@ function createNewWord(input) {
   // give it color
 }
 
-export { shapeTheText, createNewWord, bigWordWord };
+export { shapeTheText, createNewWord, transformWord, bigWordWord };
